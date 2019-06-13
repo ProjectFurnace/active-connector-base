@@ -1,0 +1,15 @@
+version: "3"
+services:
+  node:
+    build:
+      context: ./
+      args:
+        INPUT_CONNECTOR: ${INPUT_CONNECTOR}
+        OUTPUT_CONNECTOR: ${OUTPUT_CONNECTOR}
+    environment:
+      - INPUT_CONNECTOR=${INPUT_CONNECTOR}
+      - INPUT_OPTIONS=${INPUT_OPTIONS}
+      - OUTPUT_CONNECTOR=${OUTPUT_CONNECTOR}
+      - OUTPUT_OPTIONS=${OUTPUT_OPTIONS}
+    volumes:
+      - ./:/app

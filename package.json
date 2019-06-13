@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@project-furnace/connector-hub": "^1.0.1"
+  }
+}
