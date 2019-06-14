@@ -30,15 +30,15 @@ RUN npm install --no-optional && npm cache clean --force
 ENV PATH /opt/node_app/node_modules/.bin:$PATH
 
 # install required connector modules
-ARG INPUT_CONNECTOR
-ENV INPUT_CONNECTOR=$INPUT_CONNECTOR
+ARG INPUT_PACKAGE
+ENV INPUT_PACKAGE=$INPUT_PACKAGE
 
-RUN npm i $INPUT_CONNECTOR
+RUN npm i $INPUT_PACKAGE
 
-ARG OUTPUT_CONNECTOR
-ENV OUTPUT_CONNECTOR=$OUTPUT_CONNECTOR
+ARG OUTPUT_PACKAGE
+ENV OUTPUT_PACKAGE=$OUTPUT_PACKAGE
 
-RUN npm i $OUTPUT_CONNECTOR
+RUN npm i $OUTPUT_PACKAGE
 
 # copy in our source code last, as it changes the most
 WORKDIR /opt/node_app/app

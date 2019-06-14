@@ -4,12 +4,14 @@ services:
     build:
       context: ./
       args:
-        INPUT_CONNECTOR: ${INPUT_CONNECTOR}
-        OUTPUT_CONNECTOR: ${OUTPUT_CONNECTOR}
+        INPUT_PACKAGE: ${INPUT_PACKAGE}
+        OUTPUT_PACKAGE: ${OUTPUT_PACKAGE}
     environment:
-      - INPUT_CONNECTOR=${INPUT_CONNECTOR}
+      - INPUT_NAME=${INPUT_NAME}
+      - INPUT_PACKAGE=${INPUT_PACKAGE}
       - INPUT_OPTIONS=${INPUT_OPTIONS}
-      - OUTPUT_CONNECTOR=${OUTPUT_CONNECTOR}
+      - OUTPUT_NAME=${OUTPUT_NAME}
+      - OUTPUT_PACKAGE=${OUTPUT_PACKAGE}
       - OUTPUT_OPTIONS=${OUTPUT_OPTIONS}
     volumes:
       - ./:/app
